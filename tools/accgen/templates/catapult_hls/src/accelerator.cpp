@@ -182,6 +182,7 @@ void <acc_full_name>::compute_dataReq() {
 
                 sync12.sync_in();
 
+//Send read memory requests to input PLM
 #pragma hls_pipeline_init_interval 1
 #pragma pipeline_stall_mode stall
                 for (uint32_t i=0; i < in_len; i++) {
